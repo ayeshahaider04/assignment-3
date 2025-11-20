@@ -15,6 +15,10 @@ router.get('/',async(req,res,next)=>{
     {
         const CourseList = await Course.find();
         console.log(CourseList);
+        res.render('course',{
+            title:'Courses',
+            CourseList:CourseList
+        })
     }
     catch(err)
     {
@@ -22,3 +26,5 @@ router.get('/',async(req,res,next)=>{
         //res.render
     }
 })
+
+module.exports = router;

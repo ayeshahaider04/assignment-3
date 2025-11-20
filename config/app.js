@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, '../node_modules')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-//app.use('/',coursesRouter)
+app.use('/courses',coursesRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
