@@ -15,7 +15,7 @@ router.get('/',async(req,res,next)=>{
     {
         const CourseList = await Course.find();
         console.log(CourseList);
-        res.render('course',{
+        res.render('Courses/list',{
             title:'Courses',
             CourseList:CourseList
         })
