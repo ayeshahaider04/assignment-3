@@ -3,9 +3,31 @@
 <!--main content for displaying my db-->
 <main class="container">
     <div class="row">
-        <div class="offset-md-1 col-md-10">
+        <div class="offset-md-1 col-md-12">
             <h1><%= title %></h1>
             <br>
+            <table class="table table-bordered table-striped table-hover">
+                <!--header row-->
+                <tr class="d-flex">
+                    <th class="text-center col-2">Class Name</th>
+                    <th class="text-center col-3">Task Description</th>
+                    <th class="text-center col-1">Task Type</th>
+                    <th class="text-center col-1">Due Date</th>
+                    <th class="text-center col-2">Level Of Completion</th>
+                    <th class="text-center col-3">Notes</th>
+                </tr>
+                <!--for/while loop to read all data and display all data from db-->
+                <% for(let count=0; count<CourseList.length;count++) { %>
+                    <tr class="d-flex">
+                        <td class="text-center col-2"><%= CourseList[count].className %></td>
+                        <td class="text-center col-3"><%= CourseList[count].taskDescription %></td>
+                        <td class="text-center col-1"><%= CourseList[count].taskType %></td>
+                        <td class="text-center col-1"><%= CourseList[count].dueDate %></td>
+                        <td class="text-center col-2"><%= CourseList[count].levelOfCompletion %></td>
+                        <td class="text-center col-3"><%= CourseList[count].notes %></td>
+                    </tr>
+                <% } %>
+            </table>
 
         </div>
     </div>
