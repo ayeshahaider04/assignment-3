@@ -1,0 +1,62 @@
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
+<!--content for adding the course-->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+
+            <form class="form" method="post">
+                <div class="form-group">
+                    <label for="classNameTextField">Course Name</label>
+                    <input type="text" class="form-control"
+                    id="classNameTextField"
+                    placeholder="Enter the name of the Course:"
+                    name="className" required>
+                </div>
+                <div class="form-group">
+                    <label for="taskDescriptionTextField">Task Description</label>
+                    <input type="text" class="form-control"
+                    id="taskDescriptionTextField"
+                    placeholder="Enter a description relating to your task/course work:"
+                    name="taskDescription" required>
+                </div>
+                <div class="form-group">
+                    <label for="taskTypeTextField">Task Type</label>
+                    <input type="text" class="form-control"
+                    id="taskTypeTextField"
+                    placeholder="Enter the type of task you need to complete (e.g. exam, quiz, lab, etc):"
+                    name="taskType" required>
+                </div>
+                <div class="form-group">
+                    <label for="dueDateTextField">Due Date </label>
+                    <input type="text" class="form-control"
+                    id="dueDateTextField"
+                    placeholder="Enter the due date of your task:"
+                    name="dueDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="levelOfCompletionTextField">Level of Completion</label>
+                    <input type="text" class="form-control"
+                    id="levelOfCompletionTextField"
+                    placeholder="Enter the completion progress (e.g. pending, not started, complete etc):"
+                    name="levelOfCompletion" required>
+                <div class="form-group">
+                    <label for="notesTextArea">Notes</label>
+                    <textarea type="text" class="form-control"
+                    id="notesTextArea"
+                    placeholder="Enter any additional notes about your task:"
+                    name="notes" required></textarea>
+                </div>
+                <br>
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Submit
+                </button>
+                <a href="/courses" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> Cancel
+                </a>
+            </form>
+        <div>
+    </div>
+</div>
+<%- include ../partials/footer.ejs %>

@@ -9,7 +9,7 @@ let Course = require('../models/course');
 //delete = delete the data 
 // crud = create read update delete 
 
-// read the data from the db
+//get route for the  read course list - read operation
 router.get('/',async(req,res,next)=>{
     try
     {
@@ -23,8 +23,61 @@ router.get('/',async(req,res,next)=>{
     catch(err)
     {
         console.error(err);
-        //res.render
+        res.render('Courses/list',{
+            error:'error on server'
+        })
     }
 })
 
+//get route for displaying the add page - create operation
+router.get('/add',async(req,res,next)=>{
+    try{
+        res.render('Courses/add',{
+            title:'Add a Course'
+        })
+    }
+        catch(err)
+    {
+        console.error(err);
+        res.render('Courses/add',{
+            error:'error on server'
+        })
+    }
+})
+//post route for processing the add page - create operation
+router.post('/add',async(req,res,next)=>{
+    try
+    {
+        let newCourse = Course({
+            "className":req.body.className,
+            "taskDescription":req.body.taskDescription,
+            "taskType":req.body.taskType,
+            "dueDate":req.body.dueDate,
+            "levelOfCompletion":req.body.levelOfCompletion,
+            "notes":req.body.notes
+        });
+        Course.create(newCourse).then(()=>{
+            res.redirect('/courses')
+        })
+    }
+        catch(err)
+    {
+        console.error(err);
+        res.render('Courses/add',{
+            error:'error on server'
+        })
+    }
+})
+//get route for displaying the edit page - update operation
+router.get('/edit/:id',async(req,res,next)=>{
+    
+})
+//post route for displaying the edit page - update operation
+router.post('/edit/:id',async(req,res,next)=>{
+    
+})
+//get route for performing delete - delete operation
+router.get('/delete/:id',async(req,res,next)=>{
+    
+})
 module.exports = router;
