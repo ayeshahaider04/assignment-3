@@ -3,10 +3,12 @@
 <!--content for adding the course-->
 <div class="container">
     <div class="row">
+        <!-- Centers the edit form on the screen -->
         <div class="offset-md-3 col-md-6">
             <h1><%= title %></h1>
-
+            <!-- Form used to update an existing course entry -->
             <form class="form" method="post">
+            <!-- Each field below is prefilled with existing datafrom the db -->
                 <div class="form-group">
                     <label for="classNameTextField">Course Name</label>
                     <input type="text" class="form-control"
@@ -62,6 +64,7 @@
                     required>
                 </div>
                 <br>
+                <!-- Submit/Cancel buttons -->
                 <button class="btn btn-primary" type="submit">
                     <i class="fas fa-edit"></i> Submit
                 </button>

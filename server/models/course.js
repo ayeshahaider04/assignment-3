@@ -1,6 +1,6 @@
 let mongoose = require("mongoose");
 
-// create a model
+// create a model in the same layout as hat we added to mongodb
 
 let courseModel = mongoose.Schema(
     {

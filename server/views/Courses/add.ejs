@@ -5,7 +5,9 @@
     <div class="row">
         <div class="offset-md-3 col-md-6">
             <h1><%= title %></h1>
-
+           
+            <!-- Form to add new course/task entry -->
+            <!-- Course Name field -->
             <form class="form" method="post">
                 <div class="form-group">
                     <label for="classNameTextField">Course Name</label>
@@ -14,6 +16,7 @@
                     placeholder="Enter the name of the Course:"
                     name="className" required>
                 </div>
+                <!-- Task Description field -->
                 <div class="form-group">
                     <label for="taskDescriptionTextField">Task Description</label>
                     <input type="text" class="form-control"
@@ -21,6 +24,7 @@
                     placeholder="Enter a description relating to your task/course work:"
                     name="taskDescription" required>
                 </div>
+                <!-- Task Type field (exam, quiz, assignment, etc) -->
                 <div class="form-group">
                     <label for="taskTypeTextField">Task Type</label>
                     <input type="text" class="form-control"
@@ -28,6 +32,7 @@
                     placeholder="Enter the type of task you need to complete (e.g. exam, quiz, lab, etc):"
                     name="taskType" required>
                 </div>
+                <!-- Due Date field -->
                 <div class="form-group">
                     <label for="dueDateTextField">Due Date </label>
                     <input type="text" class="form-control"
@@ -35,6 +40,7 @@
                     placeholder="Enter the due date of your task:"
                     name="dueDate" required>
                 </div>
+                <!-- Level of Completion field -->
                 <div class="form-group">
                     <label for="levelOfCompletionTextField">Level of Completion</label>
                     <input type="text" class="form-control"
@@ -42,6 +48,7 @@
                     placeholder="Enter the completion progress (e.g. pending, not started, complete etc):"
                     name="levelOfCompletion" required>
                 </div>
+                <!-- Notes field -->
                 <div class="form-group">
                     <label for="notesTextField">Notes</label>
                     <input type="text" class="form-control"
@@ -50,6 +57,7 @@
                     name="notes" required>
                 </div>
                 <br>
+                <!-- Submit/Cancel buttons -->
                 <button class="btn btn-primary" type="submit">
                     <i class="fas fa-edit"></i> Submit
                 </button>
