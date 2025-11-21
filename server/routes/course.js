@@ -28,7 +28,6 @@ router.get('/',async(req,res,next)=>{
         })
     }
 })
-
 //get route for displaying the add page - create operation
 router.get('/add',async(req,res,next)=>{
     try{
@@ -70,11 +69,45 @@ router.post('/add',async(req,res,next)=>{
 })
 //get route for displaying the edit page - update operation
 router.get('/edit/:id',async(req,res,next)=>{
-    
+    try
+    {
+        const id = req.params.id;
+        const courseToEdit = await Course.findById(id);
+        res.render("Courses/edit",
+            {
+                title: 'Edit Course',
+                Course: courseToEdit
+            }
+        )
+    }
+    catch(err)
+    {
+        console.log(err);
+        next(err);
+    }
 })
 //post route for displaying the edit page - update operation
 router.post('/edit/:id',async(req,res,next)=>{
-    
+    try{
+        let id = req.params.id;
+        let updateCourse = Course({
+            "_id":id,
+            "className":req.body.className,
+            "taskDescription":req.body.taskDescription,
+            "taskType":req.body.taskType,
+            "dueDate":req.body.dueDate,
+            "levelOfCompletion":req.body.levelOfCompletion,
+            "notes":req.body.notes
+        })
+        Course.findByIdAndUpdate(id,updateCourse).then(()=>{
+            res.redirect("/courses")
+        })
+    }
+    catch(err)
+    {
+        console.log(err);
+        next(err);
+    }
 })
 //get route for performing delete - delete operation
 router.get('/delete/:id',async(req,res,next)=>{

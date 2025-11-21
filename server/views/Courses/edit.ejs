@@ -12,42 +12,54 @@
                     <input type="text" class="form-control"
                     id="classNameTextField"
                     placeholder="Enter the name of the Course:"
-                    name="className" required>
+                    name="className" 
+                    value="<%= Course.className%>"
+                    required>
                 </div>
                 <div class="form-group">
                     <label for="taskDescriptionTextField">Task Description</label>
                     <input type="text" class="form-control"
                     id="taskDescriptionTextField"
                     placeholder="Enter a description relating to your task/course work:"
-                    name="taskDescription" required>
+                    name="taskDescription" 
+                    value="<%= Course.taskDescription%>"
+                    required>
                 </div>
                 <div class="form-group">
                     <label for="taskTypeTextField">Task Type</label>
                     <input type="text" class="form-control"
                     id="taskTypeTextField"
                     placeholder="Enter the type of task you need to complete (e.g. exam, quiz, lab, etc):"
-                    name="taskType" required>
+                    name="taskType" 
+                    value="<%= Course.taskType%>"
+                    required>
                 </div>
                 <div class="form-group">
                     <label for="dueDateTextField">Due Date </label>
                     <input type="text" class="form-control"
                     id="dueDateTextField"
                     placeholder="Enter the due date of your task:"
-                    name="dueDate" required>
+                    name="dueDate" 
+                    value="<%= Course.dueDate%>"
+                    required>
                 </div>
                 <div class="form-group">
                     <label for="levelOfCompletionTextField">Level of Completion</label>
                     <input type="text" class="form-control"
                     id="levelOfCompletionTextField"
                     placeholder="Enter the completion progress (e.g. pending, not started, complete etc):"
-                    name="levelOfCompletion" required>
+                    name="levelOfCompletion" 
+                    value="<%= Course.levelOfCompletion%>"
+                    required>
                 </div>
                 <div class="form-group">
                     <label for="notesTextField">Notes</label>
                     <input type="text" class="form-control"
                     id="notesTextField"
                     placeholder="Enter any additional notes about your task:"
-                    name="notes" required>
+                    name="notes" 
+                    value="<%= Course.notes%>"
+                    required>
                 </div>
                 <br>
                 <button class="btn btn-primary" type="submit">

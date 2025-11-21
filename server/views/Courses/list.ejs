@@ -27,6 +27,15 @@
                         <td class="text-center col-1"><%= CourseList[count].dueDate %></td>
                         <td class="text-center col-2"><%= CourseList[count].levelOfCompletion %></td>
                         <td class="text-center col-3"><%= CourseList[count].notes %></td>
+                        <td class="text-center col-1">
+                        <a href="/courses/edit/<%= CourseList[count]._id%>" 
+                            class="btn btn-primary btn-sm"> 
+                            <i class="fa-solid fa-pen-to-square"></i> Edit
+                        </a></td>
+                        <td class="text-center col-1">
+                        <a href="/courses/delete/<%= CourseList[count]._id%>" 
+                            class="btn btn-danger btn-sm">
+                            <i class="fa-solid fa-delete-left"></i> Delete</a></td>
                     </tr>
                 <% } %>
             </table>
