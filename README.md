@@ -1,5 +1,3 @@
-for readme 
-
 I made a website for those who want to track course work to help them stay organized with school.
 
 Here is a link to the website: https://assignment-3-x03a.onrender.com/
