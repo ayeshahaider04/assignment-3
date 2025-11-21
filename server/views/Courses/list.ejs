@@ -5,10 +5,11 @@
     <div class="row">
         <div class="offset-md-1 col-md-12">
             <h1><%= title %></h1>
-            <a href="/courses/add" class="btn btn-primary" role="button">
+            <a href="/courses/add" class="btn btn-success" role="button">
                 <i class="fas fa-plus-circle"></i> Add a Course
             </a>
-            <table class="table table-bordered table-striped table-hover">
+            <!--added table-danger to make the table pink-->
+            <table class="table table-bordered table-striped table-hover table-danger">
                 <!--header row-->
                 <tr class="d-flex">
                     <th class="text-center col-2">Course Name</th>
@@ -29,7 +30,7 @@
                         <td class="text-center col-3"><%= CourseList[count].notes %></td>
                         <td class="text-center col-1">
                         <a href="/courses/edit/<%= CourseList[count]._id%>" 
-                            class="btn btn-primary btn-sm"> 
+                            class="btn btn-info btn-sm"> 
                             <i class="fa-solid fa-pen-to-square"></i> Edit
                         </a></td>
                         <td class="text-center col-1">
