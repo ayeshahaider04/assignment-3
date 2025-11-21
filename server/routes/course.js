@@ -111,6 +111,16 @@ router.post('/edit/:id',async(req,res,next)=>{
 })
 //get route for performing delete - delete operation
 router.get('/delete/:id',async(req,res,next)=>{
-    
+    try{
+        let id = req.params.id;
+        Course.deleteOne({_id:id}).then(()=>{
+            res.redirect("/courses")
+        })
+    }
+    catch(err)
+    {
+        console.log(err);
+        next(err);
+    }
 })
 module.exports = router;
